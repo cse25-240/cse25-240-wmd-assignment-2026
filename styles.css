@@ -9,3 +9,43 @@
     height : 100px;
     z-index: 4;
 }
+.material-symbols-rounded {
+    display: block;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    font-variation-settings: 
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;        
+}
+.container{
+    padding-inline: 15px;
+    max-width: 581px;
+    margin-inline:auto; 
+    width: 100%;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-inline: 25px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    max-width: max-content;
+    transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+.btn-primary{
+    background-color: var(--primary-100);
+    color: var(--neutral-100);
+}
+.btn-primary:where(:hover, :focus){
+    background-color: var(--primary-80);
+    box-shadow: var(--shadow-1);
+}
+.btn-primary:where(:active, :focus-visible){
+    background-color: var(--primary-70);
+    
+}
+    
