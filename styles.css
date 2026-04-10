@@ -48,4 +48,35 @@
     background-color: var(--primary-70);
     
 }
+.btn-outline{
+    color:var(--primary-100);
+    box-shadow: inset 0 0 0 2px var(--primary-100);
     
+}
+
+.btn-outline:where(:hover, :focus, :focus-visible){
+    color: var(--primary-100);
+    
+}
+.btn-outline:hover{
+    background-color: var(--primary-100);
+}
+.btn-outline:focus{
+    background-color: var(--primary-90);
+}
+.btn-outline:where(:active, :focus-visible)
+{
+    background-color: var(--primary-80);
+}
+ 
+
+.icon-btn{
+   width:40px;
+   height: 40px;
+   display: grid;
+   color: var(--neutral-10);
+   place-items: center;
+   background-color: var(--neutral-100); 
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow-3);
+}
