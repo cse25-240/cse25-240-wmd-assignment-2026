@@ -176,6 +176,8 @@ nav{
     align-items: center;
     padding: 0px 2%;
     display: flex;
+    text-transform: uppercase;
+    
    
 }
 
@@ -202,6 +204,7 @@ nav{
     display: flex;
     gap: 20px;
     align-items: center;
+    margin-left: 580px;
 }
 
 .L-button{
@@ -214,6 +217,8 @@ nav{
     transition: var(--transition-duration-quick) var(--transition-easing-quick);
     cursor: pointer;
     border-radius: 60px;
+    float: right;
+   
 }
 
 .L-button:hover{
@@ -230,6 +235,7 @@ nav{
     transition: var(--transition-duration-quick) var(--transition-easing-quick);
     cursor: pointer;
     border-radius: 60px;
+    
 }
 
 .s-button:hover{
@@ -312,6 +318,12 @@ nav{
 
 .search-item .search-item-field:where(:hover, :focus, :focus-visible) {
   background-color: var(--neutral-60);
+
+}
+.search-item .search-item-field:where(:active,  :focus-visible) {
+  background-color: var(--neutral-90);
+  color: var(--neutral-10);
+  
 }
 
 .search-item:where(.label, .material-symbols-rounded) {
@@ -322,6 +334,7 @@ nav{
   top: 12px;
   left: 16px;
   color: var(--neutral-10);
+  margin-left: 15px;
 }
 
 .search-item .material-symbols-rounded {
@@ -362,4 +375,26 @@ nav{
   min-height: 100%;
   pointer-events: none;
   z-index: -2;
+}
+
+
+/**property section
+*/
+
+.btn-outline {
+    background-color: transparent;
+    text-decoration: none;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    color: var(--secondary-90);
+    border: 2px solid var(--secondary-100);
+    border-radius: var(--radius-medium);
+    font-size: var(--fs-title-medium);
+    font-weight: var(--fw-semibold);
+    transition: var(--transition-duration-quick) var(--transition-easing-quick);
+    cursor: pointer;}
+
+.btn-outline:hover {
+    background-color: var(--neutral-70);
 }
