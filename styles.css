@@ -293,7 +293,7 @@ nav{
 }
 .search-bar {
   background: var(--white);
-  display: grid;
+  
   padding: 12px;
   gap: 4px;
   border-radius: 25px;
@@ -305,6 +305,7 @@ nav{
 .search-item {
   position: relative;
   color: var(--neutral-50);
+  ;
 }
 
 
@@ -314,6 +315,7 @@ nav{
   border-radius: var(--radius-medium);
   transition: var(--transition-duration-quick) var(--transition-easing-quick);
   cursor: pointer;
+ 
 }
 
 .search-item .search-item-field:where(:hover, :focus, :focus-visible) {
@@ -393,8 +395,97 @@ nav{
     font-size: var(--fs-title-medium);
     font-weight: var(--fw-semibold);
     transition: var(--transition-duration-quick) var(--transition-easing-quick);
+    margin-left: 9px;
     cursor: pointer;}
 
 .btn-outline:hover {
     background-color: var(--neutral-70);
 }
+
+
+
+
+.img-holder{
+    width: 100%;
+    height: 200px;
+    background-color: var(--neutral-90);
+    border-radius: var(--radius-medium);
+    margin-bottom: 9px;
+    margin-top: 9px;
+    
+}
+
+.section-title{
+    font-size: var(--fs-headline-medium);
+    font-weight: var(--fw-bold);
+    font-family: var(--font-primary);
+    color: var(--neutral-10);
+    margin-left:9px;
+    margin-top:8px ;
+  }
+
+.section-text{
+    font-size: var(--fs-body-medium);
+    font-family: var(--font-primary);
+    color: var(--neutral-50);
+    margin-left:13px;
+}
+
+.crd-banner {
+    margin-left: 10px;
+}
+
+.crd-content{
+  margin-left: 10px;
+}
+
+.fav-btn .material-symbols-rounded{
+    background-color: transparent;
+    text-decoration: none;
+    border: none solid ;
+    color: var(--primary-90);
+    ;
+       }
+.crd-title{
+    font-size: var(--fs-title-large);
+    font-weight: var(--fw-semibold);
+    font-family: var(--font-primary);
+    color: var(--neutral-10);
+    text-decoration: none;
+}
+.add-text {
+    font-size: var(--fs-body-medium);
+    font-family: var(--font-primary);
+    color: var(--neutral-50);
+}
+
+.crd-text{
+    font-size: var(--fs-body-medium);
+    font-family: var(--font-primary);
+    color: var(--neutral-50);
+    margin-top: 8px;
+}
+
+.meta-item .material-symbols-rounded{
+    background-color: transparent;
+    text-decoration: none;
+    border: none solid ;
+    color: var(--primary-90);
+}
+.meta-item .meta-text{
+    font-size: var(--fs-label-medium);
+    font-family: var(--font-primary);
+    color: var(--secondary-100);  
+}
+
+.rent-text{
+    font-size: var(--fs-title-medium);
+    font-family: var(--font-primary);
+    color: var(--secondary-90);
+          
+}
+
+
+
+
+    
