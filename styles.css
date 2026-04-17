@@ -486,6 +486,50 @@ nav{
 }
 
 
+.mapContainer {
+            padding: 20px;
+            border: solid 1px #cccccc;
+            background-color: #ffffff;
+            -webkit-box-shadow: 1px 1px 4px 1px #f0f0f0;
+            box-shadow: 1px 1px 4px 1px #f0f0f0;
+            width: 980px !important;
+            height: 420px;
+            margin-left: -10px;
+        }
 
+        .mapContainer h1 {
+            font-size: 16px;
+            margin: 0px;
+            padding: 0px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .mapContainer .mapWrapper {
+            margin-left: 10px;
+            margin-right: 30px;
+            margin-top: 10px;
+            float: left;
+            margin-bottom: -25px;
+        }
+
+        .mapContainer .citiesListContainer {
+            width: 450px;
+            float: right;
+        }
+
+        .mapContainer .citiesListContainer ul {
+            width: 33%;
+            float: left;
+            font-size: 14px;
+            font-weight: bold;
+            font-size: 14px;
+            list-style: none;
+        }
+
+        .mapContainer .citiesListContainer ul li a {
+            font-size: 14px;
+            line-height: 30px;
+        }
 
     
