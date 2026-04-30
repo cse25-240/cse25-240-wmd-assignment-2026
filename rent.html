@@ -66,13 +66,14 @@
               </p>
 
             <form action="./" method="get" class="search-bar">
-                <label for="search-input" class="label label-medium">Search for rentals
+                <label for="search-input" style=" color: rgb(214, 113, 66);" >Search for rentals
                 </label>
                 <input 
                  type="text"                
                  name="search"
                  class="search-item-field body-medium" 
-                 placeholder="Search by location, price, or features"/>
+                 placeholder="Search by location, price, or features"
+                 style="cursor: text;"/>
               
               <button type="submit" class="search-button" style="display: flex;width: 85px;background-color:rgb(23, 77, 32);color: aliceblue;border-radius: 25px;padding-right: 4px;
               padding-left: 4px;
@@ -91,19 +92,19 @@
     </section>
 
     <!--Rental Listings -->
-    <section class="rentals">
+    <section class="rentals" aria-labelledby="property-label">
       <div class="container">
 
-        <div class="Title-wrapper">
+        <div class="title-wrapper">
 
-          <h2 class="section-title">Featured Rentals</h2>
+          <h2 class="section-title">Find Rentals Just For You</h2>
           <p class="section-text">Discover our handpicked selection of rental properties that offer the perfect blend of comfort and convenience.
           <a href="#" class="btn-link label-medium" style="text-decoration: none; color: rgb(20, 106, 20);" >View All</a></p>
 
 
 
         </div>
-        <div class="Rental-list">
+        <div class="property-list">
 
           <div class="crd">
 
@@ -444,6 +445,34 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 NtlwanaHomes. All rights reserved.</p>
+             <section class="footer-container">
+        <div class="Useful-links">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Rent</a></li>
+            <li><a href="#">Sell</a></li>
+            <li><a href="#">Buy</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+        <div class="Support">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+
+        <div class="mission">
+          <h3>Our Mission</h3>
+          <p>
+            At NtlwanaHomes, our mission is to provide a seamless and personalized real estate experience, connecting buyers, sellers, and renters with their ideal properties while fostering trust and community.</p>
+
+
+
+        </div>    
+      </section>
 
 </body>
 </html>    
