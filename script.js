@@ -1,8 +1,27 @@
-/**header scroll effect */
-const /**{node element} */ $header = document.querySelector("[data-header]");
-window.addEventListener("scroll",e => {
-    $header.classList[window.scrollY > 50 ? "add" : "remove"]("active")})
-
+/**header scroll effect 
+Header hide-on-scroll-down / show-on-scroll-up */
+const $header = document.querySelector("[data-header]");
+if ($header) {
+  let lastScrollY = window.scrollY;
+ 
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+ 
+    // Add "active" dark background once user scrolls past 50px
+    $header.classList.toggle("active", currentScrollY > 50);
+ 
+    // Hide header when scrolling DOWN, show when scrolling UP
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      // Scrolling down — slide header out of view
+      $header.classList.add("hidden");
+    } else {
+      // Scrolling up — slide header back in
+      $header.classList.remove("hidden");
+    }
+ 
+    lastScrollY = currentScrollY;
+  }, { passive: true });
+}
 
     /* Mobile navigation toggle */
     const navToggle = document.querySelector(".nav-toggle");
