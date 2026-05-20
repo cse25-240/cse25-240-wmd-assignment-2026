@@ -8,7 +8,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sell with NtlwanaHomes</title>
+<title>Sell your property with NtlwanaHomes</title>
+<meta name="description" content="Sell your property with NtlwanaHomes, your trusted real estate partner. Get a free valuation and list your property for a quick sale at the best price.">
 
 <!--external css-->
 <link rel ="stylesheet" href="styles.css">
@@ -16,9 +17,9 @@
 <script src="script.js" defer></script>
 
 <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
 
@@ -29,15 +30,11 @@
 
 
     <header class="header" data-header>
-        <div class="container">
-
-           
-
-           <nav class="navbar">
-            <div class="logo"> <a href="#" class="logo">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="NtlwanaHomes logo">
                 <img src="images/ntlwanaHomes logo.png" height="70" width="200" alt="NtlwanaHomes logo">
             </a> 
-        </div>
+        
           <ul class="navbar-list">
             <li><a href="index.html" style="text-decoration: none;" >Home</a></li>
             <li><a href="rent.html" style="text-decoration: none;" >Rent</a></li>
@@ -48,22 +45,44 @@
 
           <div class="nav-right">
 
-           <button class="L-button" ><a href="#" style="text-decoration: none;" class="btn-link label-medium">Login</a></button>
+           <button class="L-button" ><a href="#" style="text-decoration: none;">Login</a></button>
 
-            <button class="s-button"><a href="#" style="text-decoration: none;" class="btn btn-fill label-medium">Sign Up</a></button>
+            <button class="s-button"><a href="#" style="text-decoration: none;">Sign Up</a></button>
           </div> 
+           <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+                  <span></span><span></span><span></span>
+                </button>
            </nav>
            </div>
-     </header>       
+     </header>
+     
+
+      <!-- Mobile Nav -->
+       <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+         <a href="index.html">Home</a>
+         <a href="rent.html">Rent</a>
+         <a href="sell.html">Sell</a>
+         <a href="buy.html">Buy</a>
+         <a href="about.html">About</a>
+         <div class="mobile-nav-btns">
+           <button class="L-button"><a href="#">Login</a></button>
+           <button class="s-button"><a href="#">Sign Up</a></button>
+         </div>
+       </nav>
+     
+
+
+
+
           
            <main>
-    <article>
+    
 
      
      <!-- Hero -->
 
-      <section class="hero">
-          <div class="container">
+      <section class="hero" aria-label="Sell hero">
+          <div class="hero-container">
             <div class="hero-content">
 
               <h1 class="hero-title">
@@ -74,12 +93,12 @@
                 Get a free valuation of your property and list it with NtlwanaHomes. Our experts will help you sell your property quickly and for the best price.
               </p>
 
-              <form action="./" method="get" class="search-bar">              
+              <form action="./" method="get" class="search-bar" role="search" aria-label="Property search valuation search ">              
                 <label for="" class="search-item">
                   <span class="label">Property type</span>
                   <select
                     name="property type"
-                    id=""
+                    id="sell-property-type"
                     class="search-item-field "
                   >
                     <option value="any">Any</option>
@@ -102,8 +121,9 @@
                   <input
                     type="text"
                     name="location"
+                    id="sell-location"
                     placeholder="Street, City"
-                    class="search-item-field body-medium"
+                    class="search-item-field "
                   />
                   <span class="material-symbols-rounded" aria-hidden="true"
                     >location_on</span
@@ -116,10 +136,6 @@
                  <span class="label-medium">Valuation Form</span>
                 </button>
 
-               
-                
-
-
               </form>
             </div>
 
@@ -130,15 +146,20 @@
             </div>
       </section>
 
-      <section class="features">
-        <div class="container">
-          <h2 class="features-title">Why Sell with NtlwanaHomes?</h2>
 
-          <ul class="features-list">
+    <!--Why Sell with NtlwanaHomes?-->
+
+      <section  aria-labelledby="why-sell-heading">
+        <div class="feature-container">
+          <h2 class="features-title" id="why-sell-heading">Why Sell with NtlwanaHomes?</h2>
+          <p class="feature-text" style="max-width: 600px;">At Ntlwana homes we strive to honor selling property for the significance it holds. We combine 
+            local market expertise with solid marketing strategies to ensure your property gets the attention it deserves.
+          </p>
+
+          <ul class="features-list" role="list">
+
             <li class="feature-item">
-              <span class="material-symbols-rounded" aria-hidden="true"
-                >verified</span
-              >
+              <span class="material-symbols-rounded" aria-hidden="true">verified</span>
               <h3 class="feature-title">Trusted Expertise</h3>
               <p class="feature-text">
                 Our team of experienced real estate professionals will guide you through the selling process, ensuring a smooth and successful transaction.
@@ -168,53 +189,105 @@
             </div>
       </section>
 
-      <section>
-        <div class="container" style="align-items: center; display: flex; flex-direction: column; gap: 1rem;" >
-          <h2 class="features-title">Ready to Sell Your Property?</h2>
+
+      <section class="cta-section" aria-labelledby="cta-heading">
+          <h2 class="features-title" id="cta-heading">Ready to Sell Your Property?</h2>
 
           <p class="feature-text">
             Contact us today to schedule a free property valuation and take the first step towards selling your property with NtlwanaHomes.
           </p>
+          <div class="cta-buttons">
           <button class="s-button"><a href="#" style="text-decoration: none;" class="btn btn-fill label-medium">Download selling guide</a></button>
 
           <button class="s-button"><a href="#" style="text-decoration: none;" class="btn btn-fill label-medium">Seller's form</a></button>
-        </div>
-
+          </div>
       </section>
-
-
-
-
-    </article>
+      
     </main>
 
-    <footer class="footer">
-       <div class="container">
-        <p class="footer-text">&copy; 2026 NtlwanaHomes. All rights reserved.</p>
-        <section class="footer-container">
-        <div class="Useful-links">
-          <h3>Useful Links</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Rent</a></li>
-            <li><a href="#">Sell</a></li>
-            <li><a href="#">Buy</a></li>
-            <li><a href="#">About</a></li>
+    <!--Footer-->
+
+      <footer class="footer">
+      <div class="footer-upper">
+        <div class="container">
+          <div class="footer-branding">
+            <a href="index.html" aria-label="NtlwanaHomes home">
+              <img
+                src="./images/ntlwanaHomes logo.png"
+                width="190"
+                height="28"
+                alt="NtlwanaHomes logo"/>
+            </a>
+            <p class="footer-text">
+              NtlwanaHomes is a leading real estate company dedicated to helping
+              you find your dream home. With a wide range of properties and
+              exceptional customer service, we are your trusted partner in the
+              real estate market.
+            </p>
+          </div>
+          <nav class="footer-nav" aria-labelledby="footer-nav-1">
+            <p class="footer-list-title" id="footer-nav-1">
+              Quick Links
+            </p>
+
+            <ul class="footer-list">
+              <li>
+                <a href="index.html" class="footer-link">Home</a>
+              </li>
+              <li>
+                <a href="buy.html" class="footer-link">Buy</a>
+              </li>
+              <li>
+                <a href="sell.html" class="footer-link">Sell</a>
+              </li>
+              <li>
+                <a href="rent.html" class="footer-link">Rent</a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="footer-nav" aria-labelledby="footer-nav-2">
+            <p class="footer-list-title" id="footer-nav-2">
+              Quick Links
+            </p>
+
+            <ul class="footer-list">
+              <li>
+                <a href="about.html" class="footer-link">About us</a>
+              </li>
+              <li>
+                <a class="footer-link">Contact us</a>
+              </li>
+              <li>
+                <a class="footer-link">Privacy Policy</a>
+              </li>
+              <li>
+                <a class="footer-link">Terms & Conditions</a>
+              </li>
+            </ul>
+          </nav>
+           <div class="footer-nav" aria-labelledby="footer-nav-3">
+          <p class="footer-list-title" id="footer-nav-3">Contact Us</p>
+          <ul class="footer-list">
+            <li><a href="mailto:hello@ntlwanahomes.com" class="footer-link">hello@NtlwanaHomes.com</a></li>
+            <li><address class="footer-link">1457 Babusi Street, Gaborone, Botswana</address></li>
+            <li>
+              <ul class="social-list" aria-label="Social media">
+                <li><a href="#" class="social-link" aria-label="Facebook"><img src="./images/facebook.svg" alt=""></a></li>
+                <li><a href="#" class="social-link" aria-label="X / Twitter"><img src="./images/X.svg" alt=""></a></li>
+                <li><a href="#" class="social-link" aria-label="Instagram"><img src="./images/instagram.svg" alt=""></a></li>
+              </ul>
+            </li>
           </ul>
         </div>
-        <div class="Support">
-          <h3>Support</h3>
-          <ul>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-       </div>
-
-
-        </section>
+      </div>
+    </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright body-medium">&copy; 2026 NtlwanaHomes. All rights reserved.</p>
         </div>
-    </footer>  
+      </div>
+    </footer>
     
 </body>
 </html>  

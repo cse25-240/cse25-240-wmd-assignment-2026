@@ -26,16 +26,12 @@
 
 
     <header class="header" data-header>
-        <div class="container">
-
-           
-
-       <nav class="navbar">
-            <div class="logo"> <a href="#" class="logo">
+     <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="NtlwanaHomes home">
                 <img src="images/ntlwanaHomes logo.png" height="70" width="200" alt="NtlwanaHomes logo">
             </a> 
-         </div>
-          <ul class="navbar-list">
+         
+          <ul class="navbar-list" role="list">
             <li><a href="index.html" style="text-decoration: none;" >Home</a></li>
             <li><a href="rent.html" style="text-decoration: none;" >Rent</a></li>
             <li><a href="sell.html" style="text-decoration: none;" >Sell</a></li>
@@ -45,18 +41,40 @@
 
           <div class="nav-right">
 
-           <button class="L-button" ><a href="#" style="text-decoration: none;" class="btn-link label-medium">Login</a></button>
+           <button class="L-button" ><a href="#" style="text-decoration: none;" >Login</a></button>
 
-            <button class="s-button"><a href="#" style="text-decoration: none;" class="btn btn-fill label-medium">Sign Up</a></button>
+            <button class="s-button"><a href="#" style="text-decoration: none;" >Sign Up</a></button>
           </div>
+          <button class="nav-toggle" aria-label=" Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+            <span></span><span></span><span></span>
+          </button>
 
         </nav>
            
      </header>
+
+      <!-- Mobile Nav -->
+       <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+         <a href="index.html">Home</a>
+         <a href="rent.html">Rent</a>
+         <a href="sell.html">Sell</a>
+         <a href="buy.html">Buy</a>
+         <a href="about.html">About</a>
+         <div class="mobile-nav-btns">
+           <button class="L-button"><a href="#">Login</a></button>
+           <button class="s-button"><a href="#">Sign Up</a></button>
+         </div>
+       </nav>
+
+
+
+
+
+
   <main>   
-  <article>
-    <section class="hero">
-        <div class="container">
+  <!-- Hero section -->
+    <section class="hero" aria-label="Rental hero">
+        <div class="hero-container">
           <div class="hero-content">
 
             <h1 class="hero-title">Find Your Perfect Rental Home
@@ -65,414 +83,302 @@
                Whether you're looking for a cozy apartment, a spacious house, or a trendy loft, we have the perfect rental for you.
               </p>
 
-            <form action="./" method="get" class="search-bar">
-                <label for="search-input" style=" color: rgb(214, 113, 66);" >Search for rentals
-                </label>
+            <form action="./" method="get" class="search-bar" role="search" aria-label="Rental search">
+                <label for="" class="search-item" style=" color: rgb(214, 113, 66); font-weight: 600;" >
+                  <span>Search for rentals</span>
+
                 <input 
-                 type="text"                
+                 type="text"
+                 id="rent-search"               
                  name="search"
                  class="search-item-field body-medium" 
                  placeholder="Search by location, price, or features"
                  style="cursor: text;"/>
-              
-              <button type="submit" class="search-button" style="display: flex;width: 85px;background-color:rgb(23, 77, 32);color: aliceblue;border-radius: 25px;padding-right: 4px;
-              padding-left: 4px;
-              padding-top: 4px;
-              padding-bottom: 4px;">
-                  <span class="material-symbols-rounded" aria-hidden="true"
-                    >search</span
-                  >
+
+                 <span class="material-symbols-rounded" aria-hidden="true">search</span>
+                </label>    
+
+
+              <button type="submit" class="search-btn" >
+                  
                   <span class="label-medium">Search</span>
                 </button>
               </form>
           </div>
            <img src="images/bg-pattern.png" alt="" class="hero-pattern" width="1240" height="840" role="presentation" >
+           <img src="images/rent-background.png" alt="" class="hero-banner" width="560" height="459"  role="presentation">
         </div>    
 
     </section>
 
     <!--Rental Listings -->
-    <section class="rentals" aria-labelledby="property-label">
-      <div class="container">
+    <section  aria-labelledby="rentals-heading">
+      <div class="property-container">
+       
+              <div class="title-wrapper">
+                <div>
+                  <h2 class="section-title" id="rentals-heading">Find Rentals Just For You</h2>
+                  <p class="section-text">
+                    Our handpicked selection of rental properties offers the perfect blend of comfort and convenience.
+                  </p>
+                </div>
+                <a href="#" class="btn-outline">
+                  <span>View All</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                </a>
+              </div>
+       
+              <div class="property-list">
+       
+                <!-- Rental 1 -->
+                <article class="crd">
+                  <div class="crd-banner">
+                    <figure class="img-holder">
+                      <img src="images/rental1.jpg" alt="Modern Rental — 1-bed flat in Gaborone" class="img-cover" width="587" height="400" loading="lazy">
+                    </figure>
 
-        <div class="title-wrapper">
+                     <span class="badge-label">New</span>
+                                  <button class="fav-btn" aria-label="Add Modern Rental Ntlwana to favourites">
+                                    <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                  </button>
+                                </div>
+                                <div class="crd-content">
+                                  <span class="price-title">P2,500 <span class="rent-text">/month</span></span>
+                                  <h3><a href="#" class="crd-title">Modern Rental Ntlwana</a></h3>
+                                  <address class="add-text">Tsholofelo West, BHC Flat 8 Block A, Gaborone</address>
+                                  <p class="crd-text">Modern living in a beautifully designed flat, perfect for individuals seeking comfort and style.</p>
+                                  <div class="meta-list">
+                                    <div class="meta-item">
+                                      <span class="material-symbols-rounded" aria-hidden="true">bed</span>
+                                      <span class="meta-text">1 Bed</span>
+                                    </div>
+                                    <div class="meta-item">
+                                      <span class="material-symbols-rounded" aria-hidden="true">bathtub</span>
+                                      <span class="meta-text">1 Bath</span>
+                                    </div>
+                                    <div class="meta-item">
+                                      <span class="material-symbols-rounded" aria-hidden="true">straighten</span>
+                                      <span class="meta-text">500 sq ft</span>
+                                    </div>
+                                  </div>
+                                </div>
+                </article>
 
-          <h2 class="section-title">Find Rentals Just For You</h2>
-          <p class="section-text">Discover our handpicked selection of rental properties that offer the perfect blend of comfort and convenience.
-          <a href="#" class="btn-link label-medium" style="text-decoration: none; color: rgb(20, 106, 20);" >View All</a></p>
+                <!-- Rental 2 -->
+                <article class="crd">
+                  <div class="crd-banner">
+                    <figure class="img-holder">
+                     <img src="images/rental2.jpg" alt="Affordable Studio Pad — Block 5, Gaborone" class="img-cover" width="587" height="400" loading="lazy">
+                                   </figure>
+                                   <span class="badge-label">New</span>
+                                   <button class="fav-btn" aria-label="Add Affordable Studio Pad to favourites">
+                                     <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                   </button>
+                                 </div>
+                                 <div class="crd-content">
+                                   <span class="price-title">P2,700 <span class="rent-text">/month</span></span>
+                                   <h3><a href="#" class="crd-title">Affordable Studio Pad</a></h3>
+                                   <address class="add-text">Motswedi, Block 5, Gaborone</address>
+                                   <p class="crd-text">Serenity and modern style combined in a beautifully designed studio, perfect for individuals.</p>
+                                   <div class="meta-list">
+                                     <div class="meta-item">
+                                       <span class="material-symbols-rounded" aria-hidden="true">bed</span>
+                                       <span class="meta-text">1 Bed</span>
+                                     </div>
+                                     <div class="meta-item">
+                                       <span class="material-symbols-rounded" aria-hidden="true">bathtub</span>
+                                       <span class="meta-text">1 Bath</span>
+                                     </div>
+                                     <div class="meta-item">
+                                       <span class="material-symbols-rounded" aria-hidden="true">kitchen</span>
+                                       <span class="meta-text">Fitted Kitchen</span>
+                                     </div>
+                                      <div class="meta-item">
+                                                        <span class="material-symbols-rounded" aria-hidden="true">straighten</span>
+                                                        <span class="meta-text">560 sq ft</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                       
+                                                <!-- Rental 3 -->
+                                                <article class="crd">
+                                                  <div class="crd-banner">
+                                                    <figure class="img-holder">
+                                                      <img src="images/studio-pad4.jpg" alt="North Gaborone Studio — 2-bed unit" class="img-cover" width="587" height="400" loading="lazy">
+                                                    </figure>
+                                                    <span class="badge-label">New</span>
+                                                    <button class="fav-btn" aria-label="Add North Gaborone Studio to favourites">
+                                                      <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                                    </button>
+                                                  </div>
+                                                  <div class="crd-content">
+                                                    <span class="price-title">P15,000 <span class="rent-text">/month</span></span>
+                                                    <h3><a href="#" class="crd-title">North Gaborone Studio</a></h3>
+                                                    <address class="add-text">Gaborone North, Plot 465, Gaborone</address>
+                                                    <p class="crd-text">Comfortable studio pad designed to meet your needs, offering a cozy and functional living space.</p>
+                                                    <div class="meta-list">
+                                                    <div class="meta-item">
+                                                                      <span class="material-symbols-rounded" aria-hidden="true">bed</span>
+                                                                      <span class="meta-text">2 Beds</span>
+                                                                    </div>
+                                                                    <div class="meta-item">
+                                                                      <span class="material-symbols-rounded" aria-hidden="true">bathtub</span>
+                                                                      <span class="meta-text">2 Baths</span>
+                                                                    </div>
+                                                                    <div class="meta-item">
+                                                                      <span class="material-symbols-rounded" aria-hidden="true">kitchen</span>
+                                                                      <span class="meta-text">Open Kitchen</span>
+                                                                    </div>
+                                                                    <div class="meta-item">
+                                                                      <span class="material-symbols-rounded" aria-hidden="true">straighten</span>
+                                                                      <span class="meta-text">560 sq ft</span>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </article>
+                                                     
+                                                              <!-- Rental 4 -->
+                                                              <article class="crd">
+                                                                <div class="crd-banner">
+                                                                  <figure class="img-holder">
+                                                                    <img src="images/rental11.jpg" alt="Secluded Studio — Plot 593, Gaborone" class="img-cover" width="587" height="400" loading="lazy">
+                                                                  </figure>
+                                                                   <span class="badge-label">New</span>
+                                                                                 <button class="fav-btn" aria-label="Add Secluded Studio to favourites">
+                                                                                   <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                                                                 </button>
+                                                                               </div>
+                                                                               <div class="crd-content">
+                                                                                 <span class="price-title">P7,000 <span class="rent-text">/month</span></span>
+                                                                                 <h3><a href="#" class="crd-title">Secluded Garden Studio</a></h3>
+                                                                                 <address class="add-text">Gaborone North, Plot 593, Gaborone</address>
+                                                                                 <p class="crd-text">Enjoy a cozy and quiet living space in a secluded area with garden views.</p>
+                                                                                 <div class="meta-list">
+                                                                                   <div class="meta-item">
+                                                                                     <span class="material-symbols-rounded" aria-hidden="true">bed</span>
+                                                                                     <span class="meta-text">2 Beds</span>
+                                                                                   </div>
+                                                                                   <div class="meta-item">
+                                                                                     <span class="material-symbols-rounded" aria-hidden="true">bathtub</span>
+                                                                                     <span class="meta-text">2 Baths</span>
+                                                                                   </div>
+                                                                                   <div class="meta-item">
+                                                                                     <span class="material-symbols-rounded" aria-hidden="true">kitchen</span>
+                                                                                     <span class="meta-text">Fitted Kitchen</span>
+                                                                                   </div>
+                                                                                   <div class="meta-item">
+                                                                                     <span class="material-symbols-rounded" aria-hidden="true">straighten</span>
+                                                                                <span class="meta-text">560 sq ft</span>
+                                                                                               </div>
+                                                                                             </div>
+                                                                                           </div>
+                                                                                         </article>
+                                                                                
+                                                                                         <!-- Rental 5 -->
+                                                                                         <article class="crd">
+                                                                                           <div class="crd-banner">
+                                                                                             <figure class="img-holder">
+                                                                                               <img src="images/rental7.jpg" alt="Phase 2 Family Home — 1-bed, Gaborone" class="img-cover" width="587" height="400" loading="lazy">
+                                                                                             </figure>
+                                                                                             <span class="badge-label">New</span>
+                                                                                             <button class="fav-btn" aria-label="Add Phase 2 Affordable Home to favourites">
+                                                                                               <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                                                                                             </button>
+                                                                                           </div>
+                                                                                           <div class="crd-content">
+                                                                                             <span class="price-title">P4,200 <span class="rent-text">/month</span></span>
+                       <h3><a href="#" class="crd-title">Phase 2 Affordable Home</a></h3>
+                   <address class="add-text">Phase 2, Plot 292, Gaborone</address>
+                <p class="crd-text">Live in a safe neighbourhood at an affordable price and enjoy the comfort that comes with it.</p>
+             <div class="meta-list">
 
-
-
-        </div>
-        <div class="property-list">
-
-          <div class="crd">
-
-            <div class="crd-banner">
-              
-              <figure class="img-holder"style="width: 587px; height: 400px;">
-                <img src="images/rental1.jpg" alt="Modern rental ntlwana" width="587"
-                 height="400" class="img-cover">
-              </figure>
-
-              <span class="badge-label">New</span>
-
-              <button class="fav-btn" aria-label="Add to favorites">
-                <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
-              </button></figure>
-            </div>
-
-            <div class="crd-content">
-
-              <span class="price-title">P2,500 pm</span>
-
-
-              <h3> 
-                <a href="#" class="crd-title">Modern Rental Ntlwana</a>
-              </h3>
-
-              <address class="add-text">Tsholofelo West,BHC Flat 8, Block A, Gaborone, Botswana
-              </address>
-
-              <p class="crd-text">
-                Experience modern living in this beautifully designed home, perfect for families seeking comfort and style.
-              </p>
-
-              <div class="meta-list">
-
-                <div class="meta-item">
+<div class="meta-item">
                   <span class="material-symbols-rounded" aria-hidden="true">bed</span>
                   <span class="meta-text">1 Bed</span>
                 </div>
-
                 <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">bathtub shower</span>
-                  <span class="meta-text">Single Bathtub and Shower</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">bathtub</span>
+                  <span class="meta-text">1 En-suite</span>
                 </div>
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">straighten  
-                  </span>
-
-                  <span class="meta-text">500 sq ft</span>
-
-                </div>
-              </div>
-        </div>
-          </div>
-
-          <div class="crd">
-
-            <div class="crd-banner">
-              
-              <figure class="img-holder"style="width: 587px; height: 400px;">
-                <img src="images/rental2.jpg" alt="Affordable Studio Pad" width="587"
-                 height="400" class="img-cover">
-              </figure>
-
-              <span class="badge-label">New</span>
-
-              <button class="fav-btn" aria-label="Add to favorites">
-                <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
-              </button></figure>
-            </div>
-
-            <div class="crd-content">
-
-              <span class="price-title">P2,700 pm</span>
-
-
-              <h3> 
-                <a href="#" class="crd-title">Affordable Studio Pad</a>
-              </h3>
-
-              <address class="add-text">Motswedi, Block 5, Gaborone, Botswana
-              </address>
-
-              <p class="crd-text">
-                Experience modern living in the serenity of this beautifully designed studio pad, perfect for individuals seeking comfort and style.
-              </p>
-
-              <div class="meta-list">
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">bed</span>
-                  <span class="meta-text">1 Bed</span>
-                </div>
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">bathtub shower</span>
-                  <span class="meta-text">Single Bathtub and Shower</span>
-                </div>
-
                 <div class="meta-item">
                   <span class="material-symbols-rounded" aria-hidden="true">kitchen</span>
-                  <span class="meta-text">fitted kitchen</span>
+                  <span class="meta-text">Fitted Kitchen</span>
                 </div>
-
-
                 <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">straighten  
-                  </span>
-
-                  <span class="meta-text">560 sq ft</span>
-                </div>
-
-
-
-              </div>
-        </div>
-                 </div>
-
-          <div class="crd">
-
-            <div class="crd-banner">
-              
-              <figure class="img-holder"style="width: 587px; height: 400px;">
-                <img src="images/studio-pad4.jpg" alt="Affordable Studio Pad" width="587"
-                 height="400" class="img-cover">
-              </figure>
-
-              <span class="badge-label">New</span>
-
-              <button class="fav-btn" aria-label="Add to favorites">
-                <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
-              </button></figure>
-            </div>
-
-            <div class="crd-content">
-
-              <span class="price-title">P15,000 pm</span>
-
-
-              <h3> 
-                <a href="#" class="crd-title">Affordable Studio Pad</a>
-              </h3>
-
-              <address class="add-text">Gaborone-North,plot 465, Gaborone, Botswana
-              </address>
-
-              <p class="crd-text">
-                Find comfort in a studio pad designed to meet your needs, offering a cozy and functional living space in a convenient location.
-              </p>
-
-              <div class="meta-list">
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">bed</span>
-                  <span class="meta-text">2 Beds</span>
-                </div>
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">bathtub shower</span>
-                  <span class="meta-text">en-suite and separate Baththroom with 2 Showers</span>
-                </div>
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">kitchen</span>
-                  <span class="meta-text">open kitchen</span>
-                </div>
-
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">straighten  
-                  </span>
-
-                  <span class="meta-text">560 sq ft</span>
-                </div>
-
-
-
-              </div>
-        </div>
-                 </div>  
-                 
-          <div class="crd">
-
-            <div class="crd-banner">
-              
-              <figure class="img-holder"style="width: 587px; height: 400px;">
-                <img src="images/rental11.jpg" alt="Affordable Studio Pad" width="587"
-                 height="400" class="img-cover">
-              </figure>
-
-              <span class="badge-label">New</span>
-
-              <button class="fav-btn" aria-label="Add to favorites">
-                <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
-              </button></figure>
-            </div>
-
-            <div class="crd-content">
-
-              <span class="price-title">P7,000 pm</span>
-
-
-              <h3> 
-                <a href="#" class="crd-title">Affordable Studio Pad</a>
-              </h3>
-
-              <address class="add-text">Gaborone-North,plot 593, Gaborone, Botswana
-              </address>
-
-              <p class="crd-text">
-              Enjoy a cozy and quiet living space in with a studio pad in a secluded area.
-              </p>
-
-              <div class="meta-list">
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">bed</span>
-                  <span class="meta-text">2 Beds</span>
-                </div>
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">bathtub shower</span>
-                  <span class="meta-text">Double Bathtub and Shower</span>
-                </div>
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">kitchen</span>
-                  <span class="meta-text">fitted kitchen</span>
-                </div>
-
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">straighten  
-                  </span>
-
-                  <span class="meta-text">560 sq ft</span>
-                </div>
-              </div>
-
-
-
-              </div>
-        </div>
-
-         <div class="crd">
-
-            <div class="crd-banner">
-              
-              <figure class="img-holder"style="width: 587px; height: 400px;">
-                <img src="images/rental7.jpg" alt="Affordable Studio Pad" width="587"
-                 height="400" class="img-cover">
-              </figure>
-
-              <span class="badge-label">New</span>
-
-              <button class="fav-btn" aria-label="Add to favorites">
-                <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
-              </button></figure>
-            </div>
-
-            <div class="crd-content">
-
-              <span class="price-title">P4,200 pm</span>
-
-
-              <h3> 
-                <a href="#" class="crd-title">Affordable Studio Pad</a>
-              </h3>
-
-              <address class="add-text">Phase 2,plot 292, Gaborone, Botswana
-              </address>
-
-              <p class="crd-text">
-              live in a safe neighborhood at an affordable price and enjoy the comfort that comes with it 
-              </p>
-
-              <div class="meta-list">
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">bed</span>
-                  <span class="meta-text">single Bed</span>
-                </div>
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">bathtub shower</span>
-                  <span class="meta-text">Single ensuite</span>
-                </div>
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">kitchen</span>
-                  <span class="meta-text">fitted kitchen</span>
-                </div>
-
-
-                <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">straighten  
-                  </span>
-
+                  <span class="material-symbols-rounded" aria-hidden="true">straighten</span>
                   <span class="meta-text">600 sq ft</span>
                 </div>
               </div>
             </div>
-
-
-
-              </div>
+          </article>
+ 
         </div>
-
-
-
-
-
-
-
-
-
-                 </div>        
-
-
-                 
-          
-
-
-
-          </div>
-        </div>
-
-       
-      
       </div>
-
-
-  </article>   
+    </section>  
 
   </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 NtlwanaHomes. All rights reserved.</p>
-             <section class="footer-container">
-        <div class="Useful-links">
-          <h3>Useful Links</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Rent</a></li>
-            <li><a href="#">Sell</a></li>
-            <li><a href="#">Buy</a></li>
-            <li><a href="#">About</a></li>
+    <!--Footer-->
+<footer class="footer">
+    <div class="footer-upper">
+      <div class="container">
+        <div class="footer-branding">
+          <a href="index.html" aria-label="NtlwanaHomes home">
+            <img src="./images/ntlwanaHomes logo.png" width="160" height="40" alt="NtlwanaHomes logo">
+          </a>
+          <p class="footer-text">
+            NtlwanaHomes is Botswana's trusted real estate partner, dedicated to helping you find your dream home with exceptional customer service.
+          </p>
+        </div>
+        <nav class="footer-nav" aria-labelledby="footer-nav-1">
+          <p class="footer-list-title" id="footer-nav-1">Quick Links</p>
+          <ul class="footer-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="buy.html"   class="footer-link">Buy</a></li>
+            <li><a href="sell.html"  class="footer-link">Sell</a></li>
+            <li><a href="rent.html"  class="footer-link">Rent</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav" aria-labelledby="footer-nav-2">
+          <p class="footer-list-title" id="footer-nav-2">Support</p>
+          <ul class="footer-list">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="#"          class="footer-link">Contact Us</a></li>
+            <li><a href="#"          class="footer-link">Privacy Policy</a></li>
+            <li><a href="#"          class="footer-link">Terms &amp; Conditions</a></li>
+          </ul>
+        </nav>
+        <div class="footer-nav" aria-labelledby="footer-nav-3">
+          <p class="footer-list-title" id="footer-nav-3">Contact Us</p>
+          <ul class="footer-list">
+            <li><a href="mailto:hello@ntlwanahomes.com" class="footer-link">hello@NtlwanaHomes.com</a></li>
+            <li><address class="footer-link">1457 Babusi Street, Gaborone, Botswana</address></li>
+            <li>
+              <ul class="social-list" aria-label="Social media">
+                <li><a href="#" class="social-link" aria-label="Facebook"><img src="./images/facebook.svg" alt=""></a></li>
+                <li><a href="#" class="social-link" aria-label="X / Twitter"><img src="./images/X.svg" alt=""></a></li>
+                <li><a href="#" class="social-link" aria-label="Instagram"><img src="./images/instagram.svg" alt=""></a></li>
+              </ul>
+            </li>
           </ul>
         </div>
-        <div class="Support">
-          <h3>Support</h3>
-          <ul>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-
-        <div class="mission">
-          <h3>Our Mission</h3>
-          <p>
-            At NtlwanaHomes, our mission is to provide a seamless and personalized real estate experience, connecting buyers, sellers, and renters with their ideal properties while fostering trust and community.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2026 NtlwanaHomes. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+ 
+  <script src="script.js" defer></script>
 
 
 
-        </div>    
-      </section>
+
+
+
 
 </body>
 </html>    

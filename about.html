@@ -9,13 +9,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>About Us</title>
+<meta name="description" content="Learn about NtlwanaHomes, our mission, and how we lead the real estate market with exceptional experience and service.">
 
 <!--external css-->    
 <link rel ="stylesheet" href="styles.css">
 <!--external javascript-->    
 <script src="script.js" defer></script>
 
-
+<!-- Google Fonts -->
+ <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
 
@@ -27,12 +32,9 @@
 
 
     <header class="header" data-header>
-        <div class="container">
-
-           
-      
-           <nav class="navbar">
-            <div class="logo"> <a href="#" class="logo">
+  
+           <nav class="navbar" aria-label="Main navigation">
+           <a href="index.html" class="logo" aria-label="NtlwanaHomes home">
                 <img src="images/ntlwanaHomes logo.png" height="70" width="200" alt="NtlwanaHomes logo">
             </a> 
         </div>
@@ -46,87 +48,167 @@
 
           <div class="nav-right">
 
-           <button class="L-button" ><a href="#" style="text-decoration: none;" class="btn-link label-medium">Login</a></button>
+           <button class="L-button" ><a href="#" style="text-decoration: none;" >Login</a></button>
 
-            <button class="s-button"><a href="#" style="text-decoration: none;" class="btn btn-fill label-medium">Sign Up</a></button>
-          </div> 
+            <button class="s-button"><a href="#" style="text-decoration: none;" >Sign Up</a></button>
+          </div>
+           <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+                   <span></span><span></span><span></span>
+                 </button>
            </nav>
         </div>
     </header>
+
+
+     <!-- Mobile Nav -->
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="rent.html">Rent</a>
+        <a href="sell.html">Sell</a>
+        <a href="buy.html">Buy</a>
+        <a href="about.html">About</a>
+        <div class="mobile-nav-btns">
+          <button class="L-button"><a href="#">Login</a></button>
+          <button class="s-button"><a href="#">Sign Up</a></button>
+        </div>
+      </nav>
     
     
 
-    <main>
+ <!-- Hero section -->   
+ <main>
+ 
     
-   <section class="about" id="about">
-        <div class="container">
-
-          <figure class="about-banner">
-            <img src="images/about-banner-1.png" alt="House interior">
-
-            <img src="images/about-banner-2.jpg" alt="House interior" class="abs-img">
-          </figure>
-
-          <div class="about-content">
-
-            <p class="section-subtitle">About Us</p>
-
-            <h2 class="h2 section-title">The Leading Real Estate Rental Marketplace.</h2>
-
-            <p class="about-text">
-              Over 500 family get there Dream houses
+    <section class="About-hero" aria-label="About NtlwanaHomes">
+      <h1>About NtlwanaHomes</h1>
+    </section>
+ 
+    <!-- Stats -->
+    <section aria-labelledby="stats-heading">
+      <div class="stats">
+        <h2 id="stats-heading">NtlwanaHomes Leads the Market</h2>
+        <p class="subtitle">
+          At NtlwanaHomes, we have built an exceptional real estate track record through trust, expertise,
+          and a genuine commitment to our clients across Botswana.
+        </p>
+ 
+        <div class="stat-row">
+          <div class="stat">
+            <h3>1st</h3>
+            <p>Top real estate market leader in Botswana</p>
+          </div>
+          <div class="stat">
+            <h3>46,000+</h3>
+            <p>Successful sales completed annually</p>
+          </div>
+          <div class="stat">
+            <h3>P25.6B+</h3>
+            <p>In property transactions per year</p>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- Mission -->
+    <section aria-labelledby="mission-heading" style="background-color: var(--neutral-90);">
+      <div class="feature-container">
+        <h2 class="features-title" id="mission-heading">Our Mission</h2>
+        <p class="feature-text" style="max-width: 660px; text-align: center;">
+          At NtlwanaHomes, our mission is to provide a seamless and personalised real estate experience —
+          connecting buyers, sellers, and renters with their ideal properties while fostering trust, transparency,
+          and community throughout Botswana.
+        </p>
+      </div>
+    </section>
+ 
+    <!-- Values -->
+    <section aria-labelledby="values-heading">
+      <div class="feature-container">
+        <h2 class="features-title" id="values-heading">Our Values</h2>
+        <ul class="features-list" role="list">
+          <li class="feature-item">
+            <span class="material-symbols-rounded" aria-hidden="true">handshake</span>
+            <h3 class="feature-title">Integrity</h3>
+            <p class="feature-text">
+              We operate with complete honesty and transparency, ensuring every client can trust the guidance and information we provide.
             </p>
+          </li>
+          <li class="feature-item">
+            <span class="material-symbols-rounded" aria-hidden="true">groups</span>
+            <h3 class="feature-title">Community</h3>
+            <p class="feature-text">
+              We believe great neighbourhoods make great homes. We invest in the communities we serve, building lasting relationships beyond the sale.
+            </p>
+          </li>
+          <li class="feature-item">
+            <span class="material-symbols-rounded" aria-hidden="true">star</span>
+            <h3 class="feature-title">Excellence</h3>
+            <p class="feature-text">
+              From our first conversation to the final handover, we hold ourselves to the highest professional standards in everything we do.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+ 
+  </main>
 
-            <ul class="about-list">
-
-              <li class="about-item">
-                <div class="about-item-icon">
-                  <ion-icon name="home-outline" role="img" class="md hydrated" aria-label="home outline"></ion-icon>
-                </div>
-
-                <p class="about-item-text">Smart Home Design</p>
-              </li>
-
-              <li class="about-item">
-                <div class="about-item-icon">
-                  <ion-icon name="leaf-outline" role="img" class="md hydrated" aria-label="leaf outline"></ion-icon>
-                </div>
-
-                <p class="about-item-text">Beautiful Scene Around</p>
-              </li>
-
-              <li class="about-item">
-                <div class="about-item-icon">
-                  <ion-icon name="wine-outline" role="img" class="md hydrated" aria-label="wine outline"></ion-icon>
-                </div>
-
-                <p class="about-item-text">Exceptional Lifestyle</p>
-              </li>
-
-              <li class="about-item">
-                <div class="about-item-icon">
-                  <ion-icon name="shield-checkmark-outline" role="img" class="md hydrated" aria-label="shield checkmark outline"></ion-icon>
-                </div>
-
-                <p class="about-item-text">Complete 24/7 Security</p>
-              </li>
-
-            </ul>
-
-            <a href="#service" class="btn">Our Services</a>
-            <div class="container">
-
-          
-
-          </div>
-
+ <footer class="footer">
+    <div class="footer-upper">
+      <div class="container">
+        <div class="footer-branding">
+          <a href="index.html" aria-label="NtlwanaHomes home">
+            <img src="./images/ntlwanaHomes logo.png" width="160" height="40" alt="NtlwanaHomes logo">
+          </a>
+          <p class="footer-text">
+            NtlwanaHomes is Botswana's trusted real estate partner, dedicated to helping you find your dream home with exceptional customer service.
+          </p>
         </div>
-
-          </div>
-
+        <nav class="footer-nav" aria-labelledby="footer-nav-1">
+          <p class="footer-list-title" id="footer-nav-1">Quick Links</p>
+          <ul class="footer-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="buy.html"   class="footer-link">Buy</a></li>
+            <li><a href="sell.html"  class="footer-link">Sell</a></li>
+            <li><a href="rent.html"  class="footer-link">Rent</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav" aria-labelledby="footer-nav-2">
+          <p class="footer-list-title" id="footer-nav-2">Support</p>
+          <ul class="footer-list">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="#"          class="footer-link">Contact Us</a></li>
+            <li><a href="#"          class="footer-link">Privacy Policy</a></li>
+            <li><a href="#"          class="footer-link">Terms &amp; Conditions</a></li>
+          </ul>
+        </nav>
+        <div class="footer-nav" aria-labelledby="footer-nav-3">
+          <p class="footer-list-title" id="footer-nav-3">Contact Us</p>
+          <ul class="footer-list">
+            <li><a href="mailto:hello@ntlwanahomes.com" class="footer-link">hello@NtlwanaHomes.com</a></li>
+            <li><address class="footer-link">1457 Babusi Street, Gaborone, Botswana</address></li>
+            <li>
+              <ul class="social-list" aria-label="Social media">
+                <li><a href="#" class="social-link" aria-label="Facebook"><img src="./images/facebook.svg" alt=""></a></li>
+                <li><a href="#" class="social-link" aria-label="X / Twitter"><img src="./images/X.svg" alt=""></a></li>
+                <li><a href="#" class="social-link" aria-label="Instagram"><img src="./images/instagram.svg" alt=""></a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      </section>
-    </main>
-  
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2026 NtlwanaHomes. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+ 
+  <script src="script.js" defer></script>
+
+</body>
+</html>
+
   
   

@@ -8,32 +8,35 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Buy With Us</title>
+<title>Buy With Us Right Here At NtlwanaHomes</title>
+ <meta name="description" content="Browse homes for sale across Botswana with NtlwanaHomes. Find your perfect property in Gaborone, Kasane, Serowe and beyond.">
+
 <!--external css-->
 <link rel ="stylesheet" href="styles.css">
+
+<!-- Google Icons and Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@25,400,0..1,0"/>
+
+
+
 <!--external javascript-->  
 <script src="script.js" defer></script>
 
 
-
-
-
-<!-- Google Icons -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@25,400,0..1,0"/>
 </head>
 <body> 
 
 
     <header class="header" data-header>
-        <div class="container">
 
-           
-
-           <nav class="navbar">
-            <div class="logo"> <a href="#" class="logo">
+     <nav class="navbar" aria-label="Main navigation">
+       <a href="index.html" class="logo" aria-label="NtlwanaHomes home">
                 <img src="images/ntlwanaHomes logo.png" height="70" width="200" alt="NtlwanaHomes logo">
             </a> 
-        </div>
           <ul class="navbar-list">
             <li><a href="index.html" style="text-decoration: none;" >Home</a></li>
             <li><a href="rent.html" style="text-decoration: none;" >Rent</a></li>
@@ -44,320 +47,284 @@
 
           <div class="nav-right">
 
-           <button class="L-button" ><a href="#" style="text-decoration: none;" class="btn-link label-medium">Login</a></button>
+           <button class="L-button" ><a href="#" style="text-decoration: none;" >Login</a></button>
 
-            <button class="s-button"><a href="#" style="text-decoration: none;" class="btn btn-fill label-medium">Sign Up</a></button>
+            <button class="s-button"><a href="#" style="text-decoration: none;" >Sign Up</a></button>
           </div>
+          <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+                  <span></span><span></span><span></span>
+                </button>
+
+
            </nav>
         </div>
     </header>
 
+     <!-- Mobile Nav -->
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="rent.html">Rent</a>
+        <a href="sell.html">Sell</a>
+        <a href="buy.html">Buy</a>
+        <a href="about.html">About</a>
+        <div class="mobile-nav-btns">
+          <button class="L-button"><a href="#">Login</a></button>
+          <button class="s-button"><a href="#">Sign Up</a></button>
+        </div>
+      </nav>
+
+
           <!--Hero section-->
-          <main>
-          <Article>
-            <section class="hero">
-              <div class="container">
+   <main>
+     <Article>
+            <section class="hero" aria-label="Buy hero">
+              <div class="hero-container">
               <div class="hero-content">
 
                 <h1 class="hero-title">Buy your dream home with us</h1>
 
                 <p class="hero-text">Discover a wide assortment of homes nationwide and locally, reserved for customers in persuit of comfort and luxury. Buy with Ntlwana Homes </p>
                 
-                <form action="./" method="get" class="search-bar">
-                <label for="search-input" class="label label-medium" style=" color: rgb( 214,113,66)">Search for Homes
-                </label>
+                <form action="./" method="get" class="B-search-bar" role="search" aria-label="Home search">
+                <label for="" class="search-item" style=" color: rgb( 214,113,66); font-weight: 600; font-size: 1.4rem;" >Search for Homes
                 <input 
-                 type="text"                
+                type="text"
+                 id="buy-search"
                  name="search"
-                 class="search-item-field body-medium" 
+                 class="search-item-field " 
                  placeholder="Search by location, price, or features" 
                  style="cursor: text;"/>
-              
-              <button type="submit" class="search-button" style="display: flex;width: 85px;background-color:rgb(23, 77, 32);color: aliceblue;border-radius: 25px;padding-right: 4px;
-              padding-left: 4px;
-              padding-top: 4px;
-              padding-bottom: 4px;">
-                  <span class="material-symbols-rounded" aria-hidden="true"
-                    >search</span
-                  >
-                  <span class="label-medium">Search</span>
+                  </label>
+              <button type="submit" class="search-btn" >
+                  <span class="material-symbols-rounded" aria-hidden="true">search</span>
+                  <span class="label">Search</span>
                 </button>
               </form>
           </div>
+          <img src="images/home background.png" alt="" class="hero-banner" width="560" height="459" role="presentation">
            <img src="images/bg-pattern.png" alt="" class="hero-pattern" width="1240" height="840" role="presentation" >
               </div>
               </div>
             </section>
 
             <!--Home Properties-->
-            <section class="homes" aria-labelledby="property-label">
-              <div class="container">
-                <div title-wrapper>
-
-                  <h2 class="section-title">Choose A Home For Your Comfort</h2>
-                  <p class="section-text">The Only Place Where Providing A Unique Home Purchasing Experince Is Prioritised. Find A Home In Any Form At A Reasonable Price</p>
-
-                </div>
-                <div class="property-list">
-
-                   <div class="crd">
-
+         <!-- Property Listings -->
+    <section aria-labelledby="buy-heading">
+      <div class="property-container">
+ 
+        <div class="title-wrapper">
+          <div>
+            <h2 class="section-title" id="buy-heading">Choose a Home for Your Comfort</h2>
+            <p class="section-text">
+              The only place where a unique home-purchasing experience is prioritised.
+              Find a home at a reasonable price.
+            </p>
+          </div>
+          <a href="#" class="btn-outline">
+            <span>View All</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+          </a>
+        </div>
+ 
+        <div class="property-list">
+ 
+          <!-- Card 1 -->
+          <article class="crd">
             <div class="crd-banner">
-
-              <figure class="img-holder" style="width: 587px; height: 400px;">
-                <img src="images/home2.jpg" alt="Modern Comfort Ntlwana" width="587"
-                 height="400" class="img-cover">
+              <figure class="img-holder">
+                <img src="images/home2.jpg" alt="Modern Comfort Ntlwana — 4-bed in Kasane" class="img-cover" width="587" height="400" loading="lazy">
               </figure>
-
               <span class="badge-label">New</span>
-
-              <button class="fav-btn" aria-label="Add to favorites">
+              <button class="fav-btn" aria-label="Add Modern Comfort Ntlwana to favourites">
                 <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
               </button>
-
             </div>
-
             <div class="crd-content">
-
               <span class="price-title">P2,500,000</span>
-
-
-              <h3> 
-                <a href="#" class="crd-title">Modern Comfort Ntlwana</a>
-              </h3>
-
-              <address class="add-text">1856 Kgwakgwe Street, Kasane
-              </address>
-
-              <p class="crd-text">
-                Experience modern living in this beautifully designed home, perfect for families seeking comfort and style.
-              </p>
-
+              <h3><a href="#" class="crd-title">Modern Comfort Ntlwana</a></h3>
+              <address class="add-text">1856 Kgwakgwe Street, Kasane</address>
+              <p class="crd-text">Modern living in a beautifully designed home, perfect for families seeking comfort and style.</p>
               <div class="meta-list">
-
                 <div class="meta-item">
                   <span class="material-symbols-rounded" aria-hidden="true">bed</span>
                   <span class="meta-text">4 Beds</span>
                 </div>
-
                 <div class="meta-item">
                   <span class="material-symbols-rounded" aria-hidden="true">bathtub</span>
                   <span class="meta-text">5 Baths</span>
                 </div>
-
                 <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">straighten  
-                  </span>
-
+                  <span class="material-symbols-rounded" aria-hidden="true">straighten</span>
                   <span class="meta-text">1,200 sq ft</span>
                 </div>
-
               </div>
-        </div>
-
-
-
-
-      </div>
-
-          <div class="crd">
-
+            </div>
+          </article>
+ 
+          <!-- Card 2 -->
+          <article class="crd">
             <div class="crd-banner">
-
-              <figure class="img-holder" style="width: 587px; height: 400px;">
-                <img src="images/home3.jpg" alt="Modern City Living" width="587"
-                 height="400" class="img-cover">
+              <figure class="img-holder">
+                <img src="images/home3.jpg" alt="Modern City Living — 4-bed in Gaborone" class="img-cover" width="587" height="400" loading="lazy">
               </figure>
-
               <span class="badge-label">New</span>
-
-              <button class="fav-btn" aria-label="Add to favorites">
+              <button class="fav-btn" aria-label="Add Modern City Living to favourites">
                 <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
               </button>
-
             </div>
-
             <div class="crd-content">
-
               <span class="price-title">P3,220,400</span>
-
-
-              <h3> 
-                <a href="#" class="crd-title">Modern City Living</a>
-              </h3>
-
-              <address class="add-text">Block 3, Plot 3476, Gaborone
-              </address>
-
-              <p class="crd-text">
-                A tailor made city experience for families who want to be in the heart of the city, with easy access to all amenities and vibrant city life. 
-              </p>
-
+              <h3><a href="#" class="crd-title">Modern City Living</a></h3>
+              <address class="add-text">Block 3, Plot 3476, Gaborone</address>
+              <p class="crd-text">A city experience for families wanting easy access to all amenities and vibrant urban life.</p>
               <div class="meta-list">
-
                 <div class="meta-item">
                   <span class="material-symbols-rounded" aria-hidden="true">bed</span>
                   <span class="meta-text">4 Beds</span>
                 </div>
-
                 <div class="meta-item">
                   <span class="material-symbols-rounded" aria-hidden="true">bathtub</span>
                   <span class="meta-text">3 Baths</span>
                 </div>
-
                 <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">straighten  
-                  </span>
-
-                  <span class="meta-text">1,000 sqft</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">straighten</span>
+                  <span class="meta-text">1,000 sq ft</span>
                 </div>
-
               </div>
-        </div>
-
-
-
-
-      </div>
-
-
-          <div class="crd">
-
+            </div>
+          </article>
+ 
+          <!-- Card 3 -->
+          <article class="crd">
             <div class="crd-banner">
-
-              <figure class="img-holder" style="width: 587px; height: 400px;">
-                <img src="images/home4.jpg" alt="Low-rise village living" width="587"
-                 height="400" class="img-cover">
+              <figure class="img-holder">
+                <img src="images/home4.jpg" alt="Low-rise Village Living — 4-bed in Serowe" class="img-cover" width="587" height="400" loading="lazy">
               </figure>
-
               <span class="badge-label">New</span>
-
-              <button class="fav-btn" aria-label="Add to favorites">
+              <button class="fav-btn" aria-label="Add Low-rise Village Living to favourites">
                 <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
               </button>
-
             </div>
-
             <div class="crd-content">
-
               <span class="price-title">P6,300,000</span>
-
-
-              <h3> 
-                <a href="#" class="crd-title">Low-rise village living</a>
-              </h3>
-
-              <address class="add-text">2465 Sekgoma ward, Serowe
-              </address>
-
-              <p class="crd-text">
-                Live in a peaceful low-rise village setting, perfect for families seeking tranquility and a close-knit community atmosphere. 
-              </p>
-
+              <h3><a href="#" class="crd-title">Low-rise Village Living</a></h3>
+              <address class="add-text">2465 Sekgoma Ward, Serowe</address>
+              <p class="crd-text">A peaceful village setting perfect for families seeking tranquility and a close-knit community.</p>
               <div class="meta-list">
-
                 <div class="meta-item">
                   <span class="material-symbols-rounded" aria-hidden="true">bed</span>
                   <span class="meta-text">4 Beds</span>
                 </div>
-
                 <div class="meta-item">
                   <span class="material-symbols-rounded" aria-hidden="true">bathtub</span>
                   <span class="meta-text">3 Baths</span>
                 </div>
-
                 <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">straighten  
-                  </span>
-
-                  <span class="meta-text">1,320 sqft</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">straighten</span>
+                  <span class="meta-text">1,320 sq ft</span>
                 </div>
-
               </div>
-        </div>
-
-
-
-
-      </div>
-
-       <div class="crd">
-
+            </div>
+          </article>
+ 
+          <!-- Card 4 -->
+          <article class="crd">
             <div class="crd-banner">
-
-              <figure class="img-holder" style="width: 587px; height: 400px;">
-                <img src="images/home7.jpg" alt="Modern City Living" width="587"
-                 height="400" class="img-cover">
+              <figure class="img-holder">
+                <img src="images/home7.jpg" alt="Big City Living — 4-bed in Gaborone" class="img-cover" width="587" height="400" loading="lazy">
               </figure>
-
               <span class="badge-label">New</span>
-
-              <button class="fav-btn" aria-label="Add to favorites">
+              <button class="fav-btn" aria-label="Add Big City Living to favourites">
                 <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
               </button>
-
             </div>
-
             <div class="crd-content">
-
               <span class="price-title">P23,100,320</span>
-
-
-              <h3> 
-                <a href="#" class="crd-title">Big City Living</a>
-              </h3>
-
-              <address class="add-text">Block 8, Plot 7696, Gaborone
-              </address>
-
-              <p class="crd-text">
-                A home situated where easy access to all amenities and vibrant city means a great deal. 
-              </p>
-
+              <h3><a href="#" class="crd-title">Big City Living</a></h3>
+              <address class="add-text">Block 8, Plot 7696, Gaborone</address>
+              <p class="crd-text">A premium home where easy access to amenities and vibrant city life comes as standard.</p>
               <div class="meta-list">
-
                 <div class="meta-item">
                   <span class="material-symbols-rounded" aria-hidden="true">bed</span>
                   <span class="meta-text">4 Beds</span>
                 </div>
-
                 <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">bathtub shower</span>
-                  <span class="meta-text">3 Baths & single shower</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">bathtub</span>
+                  <span class="meta-text">3 Baths</span>
                 </div>
-
                 <div class="meta-item">
                   <span class="material-symbols-rounded" aria-hidden="true">garage</span>
-                  <span class="meta-text">2 garages,4 cars</span>
+                  <span class="meta-text">Double Garage</span>
                 </div>
-
                 <div class="meta-item">
-                  <span class="material-symbols-rounded" aria-hidden="true">straighten  
-                  </span>
-
-                  <span class="meta-text">1,400 sqft</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">straighten</span>
+                  <span class="meta-text">1,400 sq ft</span>
                 </div>
-
               </div>
+            </div>
+       </article>
+ 
         </div>
-
-
-
-
       </div>
-                </div>
+    </section>
+  </main>
 
 
-                </div>
-              </div>
+  <!-- Footer -->
+  <footer class="footer">
+      <div class="footer-upper">
+        <div class="container">
+          <div class="footer-branding">
+            <a href="index.html" class="logo" aria-label="NtlwanaHomes home">
+              <img src="images/ntlwanaHomes logo.png" height="70" width="200" alt="NtlwanaHomes logo">
+            </a>
+            <p class="footer-text">NtlwanaHomes is Botswana's trusted real estate partner, dedicated to helping you find your perfect home.</p>
+          </div>
+          <nav class="footer-nav" aria-labelledby="footer-nav-1">
+          <p class="footer-list-title" id="footer-nav-1">Quick Links</p>
+          <ul class="footer-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="buy.html"   class="footer-link">Buy</a></li>
+            <li><a href="sell.html"  class="footer-link">Sell</a></li>
+            <li><a href="rent.html"  class="footer-link">Rent</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav" aria-labelledby="footer-nav-2">
+          <p class="footer-list-title" id="footer-nav-2">Support</p>
+          <ul class="footer-list">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="#"          class="footer-link">Contact Us</a></li>
+            <li><a href="#"          class="footer-link">Privacy Policy</a></li>
+            <li><a href="#"          class="footer-link">Terms &amp; Conditions</a></li>
+          </ul>
+        </nav>
+        <div class="footer-nav" aria-labelledby="footer-nav-3">
+          <p class="footer-list-title" id="footer-nav-3">Contact Us</p>
+          <ul class="footer-list">
+            <li><a href="mailto:hello@ntlwanahomes.com" class="footer-link">hello@NtlwanaHomes.com</a></li>
+            <li><address class="footer-link">1457 Babusi Street, Gaborone, Botswana</address></li>
+            <li>
+              <ul class="social-list" aria-label="Social media">
+                <li><a href="#" class="social-link" aria-label="Facebook"><img src="./images/facebook.svg" alt=""></a></li>
+                <li><a href="#" class="social-link" aria-label="X / Twitter"><img src="./images/X.svg" alt=""></a></li>
+                <li><a href="#" class="social-link" aria-label="Instagram"><img src="./images/instagram.svg" alt=""></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2026 NtlwanaHomes. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+ 
+  <script src="script.js" defer></script>
+            
 
-            </section>
 
-          
-
-
-          </Article>
-          </main>
 </body>
 </html>
 
